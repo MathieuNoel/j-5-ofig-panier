@@ -248,17 +248,22 @@ main {
     justify-content: space-between;
     border: 1px  solid rgb(223, 223, 215);
     border-left: none;
-    border-right: none;
-    
+    border-right: none;    
     padding: 15px 0;
 }
 
-
+.panier__total__prix ins {
+    color: red;
+    font-weight: 900;
+    font-size: 1.3rem;
+    padding-right: 2rem;
+}
 
 .panier__total__valider__continu {
     background-color: rgb(223, 223, 215);
     padding: 15px 10px;
     border-radius: 4px;
+    
 }
 
 .panier__total__valider__payer {
