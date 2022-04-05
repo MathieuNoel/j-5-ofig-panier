@@ -1,0 +1,268 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    /* on désactive le scroll au niveau du body */
+    overflow: hidden;
+}
+
+#container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.logo {
+    background-color: #c80000;
+    font-size: 2em;
+    padding: 0.5em;
+    font-weight: 700;
+}
+
+.logo__desc {
+    /* 
+    rem prend pour référence de calcul la taille de l'élément racine html
+    si on n'a pas mis de font-size à cet élément, c'est la taille par défaut du navigateur qui s'applique (16px)
+    */
+    font-size: 0.8rem;
+}
+
+.selection {
+    background-color: #666;
+    text-align: center;
+    padding: 0.5em 0;
+
+}
+
+.selection__current {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.selection--small {
+    font-size: 0.9em;
+}
+
+main {
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.item {
+    /* 
+    Il faut impérativement donner une position autre que static à l'élément contenant
+    */
+    position: relative;
+    width: 250px;
+    margin: 0.3em;
+    border: 1px solid #ccc;
+    padding: 0.3em;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+}
+
+.item:hover {
+    box-shadow: 3px 3px 5px #ccc;
+}
+
+.item__image {
+    max-width: 100%;
+}
+
+.item__content {
+    padding: 0.3em;
+}
+
+.item__content__category {
+    text-transform: uppercase;
+    color: #ccc;
+    border-bottom: 1px solid #ccc;
+    font-size: 0.7em;
+    font-weight: 700;
+    padding: 0.3em;
+    margin: 0.3em 0;
+}
+
+.item__content__name {
+    font-weight: 700;
+    font-size: 1.3em;
+    margin: 0.3em 0;
+}
+
+.item__content__desc {
+    font-size: 0.8em;
+}
+
+.item__buy {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding: 1em;
+    background-color: #c80000;
+    margin-top: 1em;
+    transition: 0.5s;
+}
+
+.item__buy:hover {
+    background-color: #333;
+}
+
+.item__buy__cart {
+    font-size: 0.8em;
+}
+
+.item__buy__price {
+    font-weight: 700;
+}
+
+.item__buy__price--old {
+    /* on raye le prix */
+    text-decoration: line-through;
+    /* on enlève le gras */
+    font-weight: normal;
+    /* on réduit un peu le texte */
+    font-size: 0.8em;
+}
+
+.item__sales {
+    width: 70px;
+    height: 70px;
+    background-color: #666;
+    border: 3px solid #ccc;
+    color: white;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 700;
+    line-height: 60px;
+    /* avec le border-radius appliqué sur un carré, on peut obtenir un cercle parfait avec une valeur à 50% */
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.sticky__sales {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    background-color: #c80000;
+    width: 25px;
+    padding: 15px 5px;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    /* on force l'affichage en vertical */
+    word-break: break-all;
+    /* on décompose le border-radius pour arrondir uniquement les coins de droite */
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+/*panier*/
+
+.panier {
+    display: flex;
+    align-content: center;
+    max-width: 70%;
+    padding-left: 30%;    
+}
+
+#cochetteteetxtouille {
+    position: relative;
+    display: flex;    
+}
+
+.panier__cochette {
+    position: relative;
+    width: 20vw;
+    height: 50vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.panier__textouille {
+    position: relative;
+    width: 20vw;
+    height: 50vh;
+    padding: 7rem 1rem 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.panier__total {
+    position: relative;
+    height:25vh;
+    width: 70vw;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.panier__cochette h3 {
+    font-weight: bolder;
+    font-size: 1.5rem;
+    padding: 2rem 0;
+}
+
+.panier__cochette h4 {
+    font-weight: bold;
+    padding: 1rem 0;
+    
+}
+
+.panier__textouille h4 {
+    font-weight: bold;
+    padding: 1rem 0 1rem 0;
+}
+
+.champs {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.panier__total__prix {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px  solid rgb(223, 223, 215);
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    padding: 15px 0;
+    background-color: rgb(248, 248, 225);
+    border-radius: 4px;
+}
+
+.panier__total__valider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px  solid rgb(223, 223, 215);
+    border-left: none;
+    border-right: none;
+    
+    padding: 15px 0;
+}
+
+
+
+.panier__total__valider__continu {
+    background-color: rgb(223, 223, 215);
+    padding: 15px 10px;
+    border-radius: 4px;
+}
+
+.panier__total__valider__payer {
+    background-color: red;
+    padding: 15px 10px;
+    border-radius: 4px;
+}

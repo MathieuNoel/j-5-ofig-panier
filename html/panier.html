@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>panier</title>
+</head>    
+<body>
+    <div id="container">
+
+        <header class="header">
+            <h1 class="logo">
+                oFig <span class="logo__desc">Figurines et statuettes</span>
+            </h1>
+            <h2 class="selection">
+                Figurines sur le thème <strong class="selection__current">Final Fantasy</strong>
+            </h2>
+
+        </header>
+        <main class="panier">
+            <div id="cochetteteetxtouille">
+                <div class="panier__cochette">
+                    <h3>
+                        Préférences de livraison
+                    </h3>
+                    <h4>
+                        Où souhaitez-vous être livré ?
+                    </h4>                
+                    <form action="" class="form__cochette">
+                        <fieldset>
+                            <input type="radio" id="mon adresse courante" name="adresse courante">
+                            <label for="mon adresse courante">mon adresse courante</label><br/>
+                            <input type="radio" id="autre adresse" name="autre">
+                            <label for="autre adresse">autre adresse</label><br/>
+                        </fieldset>
+                            <h4>
+                                option
+                            </h4>
+                        <fieldset>
+                            <input type="checkbox" id="suivi" name="sms">
+                            <label for="suivi">Suivi de livraison par sms (inclus)</label><br>
+                            <input type="checkbox" id="satisfaction" name="remboursement">
+                            <label for="satisfaction">Satisfait ou remmboursé(+2 euros)</label><br>
+                            <input type="checkbox" id="garantie" name="garantie">
+                            <label for="garantie">Garantie 2 ans(+10 euros)</label><br>
+                        </fieldset>
+                    </form>
+                </div>            
+                <div class="panier__textouille">
+                    <form action="">
+                        <h4>
+                            Adresse
+                        </h4>
+                        <fieldset>
+                            <label for="rue">rue</label><br>
+                            <input class="champs" type="text" id="rue" name="rue"><br>
+                            <label for="zip">Code postal</label><br>
+                            <input class="champs" type="text" id="zip" name="code-postal"><br>
+                            <label for="town">Ville</label><br>
+                            <input class="champs" type="text" id="town" name="ville"><br>                       
+                        </fieldset>
+                        <h4>
+                            Information conmplémentaires
+                        </h4>
+                        <label for="complement">interphone, bâtiment, etc.</label><br>
+                        <textarea class="champs" type="text" id="complement" name="etc"></textarea><br>
+                    </form>
+                </div>
+            </div>
+            <div class="panier__total">
+                <article class="panier__total__prix">
+                    <p>Montant total à régler</p>
+                    <ins>197 €</ins>
+                </article>
+                <article class="panier__total__valider">
+                    <a class="panier__total__valider__continu" href="/var/www/html/S01E07-challenge-ofig-panier-MathieuNoel/html/index.html">Continuer vos achats</a>
+                    <a class="panier__total__valider__payer" href="#">Valider et payer</a>
+                </article>
+            </div>
+        </main>
+        <footer class="selection selection--small">
+            oFig - toutes les images sont sous copyright SquareEnix
+
+        </footer>
+    </div>
+    <div class="sticky__sales">soldes</div>
+</body>
+</html>
